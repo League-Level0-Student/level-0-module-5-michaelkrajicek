@@ -6,26 +6,46 @@ public class PrimeNumber {
 
 	public static void main(String[] args) {
 
-		String numString = JOptionPane.showInputDialog("Enter a number to see if it is prime.");
+		System.out.println("List of prime numbers:");
+		System.out.println("2 3 5");
 
-		int numInt = Integer.parseInt(numString);
+		//int numInt = 2;
+		//1999999999
 
-		for(int i = 2; i < numInt; i++) {
-			
-			if (numInt % i == 0) {
-				
-				JOptionPane.showMessageDialog(null, "Not prime!");
-				
-				System.exit(0);
-				
-			} else {
-				
-				JOptionPane.showMessageDialog(null, "Prime nunmber!");
-				
-				System.exit(0);
-				
+		int count = 0;
+
+		for(int numInt = 2; numInt < 1999999999 ; numInt++) {
+
+			for(int i = 2; i < numInt/2; i++) {
+
+				if (numInt % i == 0) {
+					break;
+				}
+
+				else if (i == numInt/2 -1) {
+					System.out.print(numInt + " ");
+					count += 1;
+
+					if (count == 20){
+
+						System.out.println();
+						count = 0;
+					}
+
+
+
+
+				}
+
+
+
+
+
+
 			}
 		}
+
 	}
 
 }
+
