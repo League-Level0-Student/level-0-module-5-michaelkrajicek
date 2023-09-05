@@ -1,0 +1,100 @@
+    /*
+ * Goal: Create a pair of Amazing Rings!
+ * 
+ * 1. Open the demonstration for this recipe by opening the Recipe.html
+ *    file in this folder.
+ * 
+ * In the setup() method:
+ * 2. Set the size of your window to be a rectangle like in the recipe
+ *    demonstration
+ * 3. Call the noFill() command so all the ellipses will be transparent
+ *
+ * In the draw() method:
+ * 4. Use a for loop to make the first set of rings that will start in the
+ *    left half of the window (you can use your code from Bullseye).
+ * 
+ * 5. Make this set of rings move across the sketch to the right
+ *    Hint: make two variables, one for x and another for the speed.
+ *    Then increase x by the amount in speed.
+ *
+ * 6. When the rings reach the right side of the sketch, reverse the direction
+ *    so they move
+ *    Hint: speed = -speed
+      
+ * 7. When the rings reach the left side of the sketch, reverse the direction
+ *    again.
+ * 
+ * CHALLENGE - to finish the Amazing Rings
+ * 8. Add another for loop to draw the second set of rings that will start in
+ *    the right half of the window
+ *
+ * 9. Make this set of rings move in the opposite direction to the other rings
+ *    These rings must also "bounce" off the sides of the window.
+ */
+ int x = 200; 
+ int x2 = 600;
+ int speed = 1;
+    static final int WIDTH = 800;
+    static final int HEIGHT = 600;
+
+    @Override
+    public void settings() {
+size (WIDTH,HEIGHT);
+    }
+
+    @Override
+    public void setup() {
+
+    }
+
+    @Override
+    public void draw() {
+      background(#ffffff);
+noFill();
+for (int i = 0; i<50; i ++) {
+  ellipse (x, 300, 400-(i*10), 400-(i*10));
+} 
+for (int i = 0; i<50; i++) {
+ ellipse (x2, 300, 400-(i*10), 400-(i*10)); 
+}
+x+=speed;
+x2-=speed;
+if (x==WIDTH || x == 0) {
+ // x-=speed;
+ speed = -speed;
+}
+if (x2==300) {
+ //x2+=speed; 
+}
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
