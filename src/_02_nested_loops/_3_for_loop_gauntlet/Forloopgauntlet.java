@@ -62,12 +62,16 @@ public class Forloopgauntlet {
 		//	System.out.println();
 		//}
 		
-		for (int j=1; j<8; j++) {
-			for (int k = 0; k<j; k++) {
+		//for (int j=1; j<7; j++) {
+			//for (int k = 0; k<j; k++) {
 				
-			System.out.print("* ");
-		} System.out.println();
-			}
+			//System.out.print("* ");
+		//} System.out.println();
+			//}
+		
+		for(int i = 0; i <101; i++) {
+			System.out.println(100 - i);
+		}
 		
 		}
 		
